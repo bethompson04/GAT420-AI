@@ -32,7 +32,6 @@ void CA::Step()
 		for (int x = 0; x < size.x; x++) {
 			uint8_t i = 0;
 
-			// two buffers switch between being read
 			// read surrounding cells (x-1, x, x+2), a value between 0-7 can be created byshifting the bits
 			i |= Read<uint8_t>(buffer, x - 1, y) << 2;
 			i |= Read<uint8_t>(buffer, x, y) << 1;
